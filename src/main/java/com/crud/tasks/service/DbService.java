@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,8 +18,16 @@ public class DbService {
         return taskRepository.findAll();
     }
 
-    public Task getTask(long id){
+    public Optional<Task> getTask(final long id){
         return taskRepository.findById(id);
+    }
+
+    public Task saveTask(final Task task){
+        return taskRepository.save(task);
+    }
+
+    public void deleteTaskById(final long id){
+        taskRepository.deleteById(id);
     }
 
 }
