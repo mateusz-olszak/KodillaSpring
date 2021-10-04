@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.client.TrelloClientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-04T15:29:20" hostname="MacBook-Pro-Mateusz.local" time="0.869">
+  <properties/>
+  <testcase name="shouldReturnEmptyList()" classname="com.crud.tasks.client.TrelloClientTest" time="0.869"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
