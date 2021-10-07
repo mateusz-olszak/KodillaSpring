@@ -22,24 +22,24 @@ public class TaskController {
     private final DbService service;
     private final TaskMapper taskMapper;
 
-    @GetMapping("/getTasks")
+    @GetMapping("getTasks")
     public List<TaskDto> getTasks(){
         List<Task> tasks = service.getAllTasks();
         return taskMapper.mapToTaskDtoList(tasks);
     }
 
-    @GetMapping("/getTask")
+    @GetMapping("getTask")
     public TaskDto getTask(@RequestParam Long id) throws TaskNotFoundException{
         Optional<Task> task = service.getTask(id);
         return taskMapper.mapToTaskDto(task.orElseThrow(TaskNotFoundException::new));
     }
 
-    @DeleteMapping("/deleteTask/{id}")
+    @DeleteMapping("deleteTask/{id}")
     public void deleteTask(@PathVariable(value = "id") Long id){
         service.deleteTaskById(id);
     }
 
-    @PutMapping("/updateTask")
+    @PutMapping("updateTask")
     public TaskDto updateTask(@RequestBody TaskDto taskDto){
         Task task = taskMapper.mapToTask(taskDto);
         Task savedTask = service.saveTask(task);
