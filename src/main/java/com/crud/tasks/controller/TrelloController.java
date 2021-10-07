@@ -12,23 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/trello")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class TrelloController {
 
     private final TrelloClient trelloClient;
-
-
-    @GetMapping("/getTrelloBoardsFiltered") // Task 22.2
-    public void getTrelloBoards(){
-        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
-
-//        trelloBoards.stream() Filtracja dla zadania 22.2/3
-//                .filter(p -> !p.getId().isEmpty() && !p.getName().isEmpty())
-//                .filter(p -> p.getName().toLowerCase().contains("kodilla"))
-//                .forEach(p -> {
-//                    System.out.println(p.getId() + " " + p.getName());
-//                });
-    }
-
 
     @GetMapping("/getTrelloBoards")
     public List<TrelloBoardDto> getTrelloBoardsWithLists(){
