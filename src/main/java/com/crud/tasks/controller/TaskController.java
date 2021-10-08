@@ -34,12 +34,12 @@ public class TaskController {
         return taskMapper.mapToTaskDto(task.orElseThrow(TaskNotFoundException::new));
     }
 
-    @DeleteMapping("deleteTask/{id}")
+    @DeleteMapping("/deleteTask/{id}")
     public void deleteTask(@PathVariable(value = "id") Long id){
         service.deleteTaskById(id);
     }
 
-    @PutMapping("updateTask")
+    @PutMapping("/updateTask")
     public TaskDto updateTask(@RequestBody TaskDto taskDto){
         Task task = taskMapper.mapToTask(taskDto);
         Task savedTask = service.saveTask(task);

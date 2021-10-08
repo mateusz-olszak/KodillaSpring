@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.service.SimpleEmailServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-08T10:38:23" hostname="MacBook-Pro-Mateusz.local" time="0.57">
+  <properties/>
+  <testcase name="shouldSendEmail()" classname="com.crud.tasks.service.SimpleEmailServiceTest" time="0.57"/>
+  <system-out><![CDATA[12:38:24.317 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Starting email preparation...
+12:38:24.330 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Email has been sent.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
