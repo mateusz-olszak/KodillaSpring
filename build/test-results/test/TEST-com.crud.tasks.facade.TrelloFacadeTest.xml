@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.facade.TrelloFacadeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-23T19:07:45" hostname="MBP-Mateusz" time="0.64">
+  <properties/>
+  <testcase name="testFetchTrelloBoards_practicalUsage()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.64"/>
+  <system-out><![CDATA[20:07:45.834 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Starting filtering boards...
+20:07:45.839 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Boards have been filtered. Current list size: 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
