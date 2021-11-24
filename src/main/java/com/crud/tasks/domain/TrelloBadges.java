@@ -9,9 +9,9 @@ import lombok.Data;
 public class TrelloBadges {
 
     @JsonProperty("votes")
-    private int votes;
+    private final int votes;
 
     @JsonProperty("attachmentsByType")
-    private TrelloAttachementByType attachements;
+    private final TrelloAttachementByType attachements;
 
 }

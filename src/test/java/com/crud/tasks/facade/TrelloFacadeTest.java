@@ -1,9 +1,6 @@
 package com.crud.tasks.facade;
 
-import com.crud.tasks.domain.CreatedTrelloCardDto;
-import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.domain.TrelloCardDto;
-import com.crud.tasks.domain.TrelloListDto;
+import com.crud.tasks.domain.*;
 import com.crud.tasks.mapper.TrelloMapper;
 import com.crud.tasks.service.TrelloService;
 import com.crud.tasks.trello.facade.TrelloFacade;
@@ -14,14 +11,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.instanceOf;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -40,59 +33,82 @@ public class TrelloFacadeTest {
     private TrelloService trelloService;
 
     @Test
-    void testFetchTrelloBoards_practicalUsage() {
+    void shouldFetchEmptyList() {
         // Given
-        List<TrelloBoardDto> trelloBoards = initializeTrelloBoards_practicalUsage();
+        List<TrelloListDto> trelloLists =
+                List.of(new TrelloListDto("1", "test_list", false));
+
+        List<TrelloBoardDto> trelloBoards =
+                List.of(new TrelloBoardDto("1", "test", trelloLists));
+
+        List<TrelloList> mappedTrelloLists =
+                List.of(new TrelloList("1", "test_list", false));
+
+        List<TrelloBoard> mappedTrelloBoards =
+                List.of(new TrelloBoard("1", "test", mappedTrelloLists));
         when(trelloService.fetchTrelloBoards()).thenReturn(trelloBoards);
-        when(trelloMapper.mapToBoard(anyList())).thenCallRealMethod();
-        when(trelloMapper.mapToBoardDtoList(any())).thenCallRealMethod();
-        when(trelloMapper.mapToList(any())).thenCallRealMethod();
-        when(trelloMapper.mapToListDto(any())).thenCallRealMethod();
-        when(trelloValidator.validateTrelloBoards(any())).thenCallRealMethod();
+        when(trelloMapper.mapToBoard(trelloBoards)).thenReturn(mappedTrelloBoards);
+        when(trelloMapper.mapToBoardDtoList(any())).thenReturn(List.of());
+        when(trelloValidator.validateTrelloBoards(mappedTrelloBoards)).thenReturn(List.of());
         // When
         List<TrelloBoardDto> trelloBoardDtos = trelloFacade.fetchTrelloBoard();
         // Then
-        assertEquals(3,trelloBoardDtos.size());
-        assertEquals(3, trelloBoardDtos.get(0).getLists().size());
-        assertEquals(TrelloBoardDto.class, trelloBoardDtos.get(0).getClass());
-        assertEquals(TrelloListDto.class, trelloBoardDtos.get(0).getLists().get(0).getClass());
-        verify(trelloService, times(1)).fetchTrelloBoards();
-        verify(trelloMapper, times(1)).mapToBoard(any());
-        verify(trelloMapper, times(1)).mapToBoardDtoList(any());
-        verify(trelloValidator, times(1)).validateTrelloBoards(any());
+        assertThat(trelloBoardDtos).isNotNull();
+        assertThat(trelloBoardDtos.size()).isEqualTo(0);
+    }
+
+    @Test
+    void shouldFetchList() {
+        // Given
+        List<TrelloListDto> trelloLists =
+                List.of(new TrelloListDto("1", "test_list", false));
+
+        List<TrelloBoardDto> trelloBoards =
+                List.of(new TrelloBoardDto("1", "test", trelloLists));
+
+        List<TrelloList> mappedTrelloLists =
+                List.of(new TrelloList("1", "test_list", false));
+
+        List<TrelloBoard> mappedTrelloBoards =
+                List.of(new TrelloBoard("1", "test", mappedTrelloLists));
+        when(trelloService.fetchTrelloBoards()).thenReturn(trelloBoards);
+        when(trelloMapper.mapToBoard(trelloBoards)).thenReturn(mappedTrelloBoards);
+        when(trelloMapper.mapToBoardDtoList(any())).thenReturn(trelloBoards);
+        when(trelloValidator.validateTrelloBoards(mappedTrelloBoards)).thenReturn(mappedTrelloBoards);
+        // When
+        List<TrelloBoardDto> trelloBoardDtos = trelloFacade.fetchTrelloBoard();
+        // Then
+        assertThat(trelloBoardDtos).isNotNull();
+        assertThat(trelloBoardDtos.size()).isEqualTo(1);
+        trelloBoardDtos.forEach(trelloBoardDto -> {
+            assertThat(trelloBoardDto.getId()).isEqualTo("1");
+            assertThat(trelloBoardDto.getName()).isEqualTo("test");
+
+            trelloBoardDto.getLists().forEach(trelloListDto -> {
+                assertThat(trelloListDto.getId()).isEqualTo("1");
+                assertThat(trelloListDto.getName()).isEqualTo("test_list");
+                assertThat(trelloListDto.isClosed()).isEqualTo(false);
+            });
+        });
     }
 
     @Test
     void testCreateCard() {
         // Given
-        TrelloCardDto trelloCardDto = new TrelloCardDto("name","description","top","1");
-        CreatedTrelloCardDto createdTrelloCardDto = new CreatedTrelloCardDto("1","createdTrelloCardDto","https://test.com");
-        when(trelloService.createTrelloCard(any())).thenReturn(createdTrelloCardDto);
-        when(trelloMapper.mapToTrelloCard(any())).thenCallRealMethod();
-        when(trelloMapper.mapToTrelloCardDto(any())).thenCallRealMethod();
-        doCallRealMethod().when(trelloValidator).validateCard(any());
+        TrelloCardDto trelloCardDto = new TrelloCardDto("name","desc","top","1");
+        TrelloCard trelloCard = new TrelloCard("name","desc","top","1");
+        CreatedTrelloCardDto createdTrelloCardDto = new CreatedTrelloCardDto("1","createdName","https://test.com");
+        when(trelloMapper.mapToTrelloCard(trelloCardDto)).thenReturn(trelloCard);
+        when(trelloMapper.mapToTrelloCardDto(trelloCard)).thenReturn(trelloCardDto);
+        doCallRealMethod().when(trelloValidator).validateCard(trelloCard);
+        when(trelloService.createTrelloCard(trelloCardDto)).thenReturn(createdTrelloCardDto);
         // When
-        CreatedTrelloCardDto trelloCard = trelloFacade.createdCard(trelloCardDto);
+        CreatedTrelloCardDto createdTrelloCardFacade = trelloFacade.createdCard(trelloCardDto);
         // Then
-        assertEquals("createdTrelloCardDto",trelloCard.getName());
-        assertEquals("https://test.com",trelloCard.getShortUrl());
-        verify(trelloService, times(1)).createTrelloCard(any());
-        verify(trelloMapper, times(1)).mapToTrelloCard(any());
-        verify(trelloMapper, times(1)).mapToTrelloCardDto(any());
-        verify(trelloValidator, times(1)).validateCard(any());
-    }
-
-    private List<TrelloBoardDto> initializeTrelloBoards_practicalUsage() {
-        TrelloListDto trelloListDto = new TrelloListDto("1","ToDo",false);
-        List<TrelloListDto> trelloListsDto = new ArrayList<>();
-        trelloListsDto.add(trelloListDto);
-        trelloListsDto.add(trelloListDto);
-        trelloListsDto.add(trelloListDto);
-        TrelloBoardDto trelloBoardDto = new TrelloBoardDto("1","Team",trelloListsDto);
-        List<TrelloBoardDto> trelloBoardsDto = new ArrayList<>();
-        trelloBoardsDto.add(trelloBoardDto);
-        trelloBoardsDto.add(trelloBoardDto);
-        trelloBoardsDto.add(trelloBoardDto);
-        return trelloBoardsDto;
+        assertThat(createdTrelloCardFacade).isNotNull();
+        verify(trelloMapper, times(1)).mapToTrelloCard(trelloCardDto);
+        verify(trelloMapper, times(1)).mapToTrelloCardDto(trelloCard);
+        verify(trelloValidator, times(1)).validateCard(trelloCard);
+        verify(trelloService, times(1)).createTrelloCard(trelloCardDto);
     }
 }

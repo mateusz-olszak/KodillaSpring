@@ -9,6 +9,6 @@ import lombok.Data;
 public class TrelloAttachementByType {
 
     @JsonProperty("trello")
-    private TrelloBoardAndCard trello;
+    private final TrelloBoardAndCard trello;
 
 }

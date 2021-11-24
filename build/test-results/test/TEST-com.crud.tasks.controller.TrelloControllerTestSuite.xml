@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.controller.TrelloControllerTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-24T23:19:59" hostname="MacBook-Pro-Mateusz.local" time="0.031">
+  <properties/>
+  <testcase name="testCreatedTrelloCard()" classname="com.crud.tasks.controller.TrelloControllerTestSuite" time="0.027"/>
+  <testcase name="testGetTrelloBoardsWithLists()" classname="com.crud.tasks.controller.TrelloControllerTestSuite" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

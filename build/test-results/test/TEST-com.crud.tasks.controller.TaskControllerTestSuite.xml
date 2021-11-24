@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.controller.TaskControllerTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-11-24T23:19:59" hostname="MacBook-Pro-Mateusz.local" time="0.131">
+  <properties/>
+  <testcase name="testUpdateTask()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.084"/>
+  <testcase name="testGetTaskWithWrongId_throwsTaskNotFoundException()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.01"/>
+  <testcase name="testFetchBoards()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.012"/>
+  <testcase name="testGetTask()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.008"/>
+  <testcase name="testCreateTask()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.006"/>
+  <testcase name="testDeleteTask()" classname="com.crud.tasks.controller.TaskControllerTestSuite" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
