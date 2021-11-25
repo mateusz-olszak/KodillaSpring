@@ -25,6 +25,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 //    testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.google.code.gson:gson'
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
 }
 

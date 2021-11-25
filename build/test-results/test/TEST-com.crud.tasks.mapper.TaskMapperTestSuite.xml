@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.mapper.TaskMapperTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-25T04:07:58" hostname="MacBook-Pro-Mateusz.local" time="0.039">
+<testsuite name="com.crud.tasks.mapper.TaskMapperTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-25T12:11:45" hostname="MBP-Mateusz" time="0.049">
   <properties/>
-  <testcase name="testMapToTaskDto()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.031"/>
-  <testcase name="testMapToTaskDtoList()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.004"/>
-  <testcase name="testMapToTask()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.002"/>
+  <testcase name="testMapToTaskDto()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.035"/>
+  <testcase name="testMapToTaskDtoList()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.006"/>
+  <testcase name="testMapToTask()" classname="com.crud.tasks.mapper.TaskMapperTestSuite" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

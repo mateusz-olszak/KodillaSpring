@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.mapper.TrelloMapperTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-11-25T04:07:58" hostname="MacBook-Pro-Mateusz.local" time="0.156">
+<testsuite name="com.crud.tasks.mapper.TrelloMapperTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-11-25T12:11:45" hostname="MBP-Mateusz" time="0.267">
   <properties/>
-  <testcase name="testMapToTrelloCardDto()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.039"/>
-  <testcase name="testMapToTrelloBoardList()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.007"/>
-  <testcase name="testMapToTrelloBoardDtoList()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.098"/>
+  <testcase name="testMapToTrelloCardDto()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.068"/>
+  <testcase name="testMapToTrelloBoardList()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.004"/>
+  <testcase name="testMapToTrelloBoardDtoList()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.184"/>
   <testcase name="testMapToTrelloCard()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.002"/>
   <testcase name="testMapToTrelloList()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.002"/>
   <testcase name="testMapToTrelloListDto()" classname="com.crud.tasks.mapper.TrelloMapperTestSuite" time="0.002"/>
