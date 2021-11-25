@@ -8,6 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.*;
@@ -43,8 +44,16 @@ public class TrelloMapperTestSuite {
         // When
         List<TrelloBoardDto> trelloBoardsDto = trelloMapper.mapToBoardDtoList(trelloBoards);
         // Then
-        assertEquals(1,trelloBoards.size());
-        assertEquals(1,trelloBoards.get(0).getLists().size());
+        trelloBoardsDto.forEach(trelloBoardDto -> {
+            assertEquals("1",trelloBoardDto.getId());
+            assertEquals("Team1",trelloBoardDto.getName());
+            assertThat(trelloBoardDto.getLists().size()).isEqualTo(1);
+            trelloBoardDto.getLists().forEach(trelloListDto -> {
+                assertEquals("1",trelloListDto.getId());
+                assertEquals("ToDo",trelloListDto.getName());
+                assertThat(trelloListDto.isClosed()).isEqualTo(false);
+            });
+        });
         assertEquals(TrelloBoardDto.class,trelloBoardsDto.get(0).getClass());
     }
 
@@ -69,6 +78,9 @@ public class TrelloMapperTestSuite {
         List<TrelloListDto> trelloListsDto = trelloMapper.mapToListDto(trelloLists);
         // Then
         assertEquals(1, trelloListsDto.size());
+        assertEquals("1", trelloListsDto.get(0).getId());
+        assertEquals("ToDo", trelloListsDto.get(0).getName());
+        assertThat(trelloListsDto.get(0).isClosed()).isEqualTo(false);
         assertEquals(TrelloListDto.class, trelloListsDto.get(0).getClass());
     }
 
@@ -93,6 +105,9 @@ public class TrelloMapperTestSuite {
         TrelloCardDto trelloCardDto = trelloMapper.mapToTrelloCardDto(trelloCard);
         // Then
         assertEquals("name", trelloCardDto.getName());
+        assertEquals("desc", trelloCardDto.getDescription());
+        assertEquals("top", trelloCardDto.getPos());
+        assertEquals("1", trelloCardDto.getListId());
         assertEquals(TrelloCardDto.class, trelloCardDto.getClass());
     }
 }

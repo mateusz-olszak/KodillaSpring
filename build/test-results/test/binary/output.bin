@@ -1,7 +1,7 @@
-o00:19:58.619 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Starting filtering boards...
-‚00:19:58.631 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Boards have been filtered. Current list size: 1
-Š00:19:58.661 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
-u00:19:58.675 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Someone is testing my application!
-Š00:19:58.838 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
-j00:19:59.248 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Starting email preparation...
-a00:19:59.252 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Email has been sent.
+o05:07:58.116 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Starting filtering boards...
+‚05:07:58.133 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Boards have been filtered. Current list size: 1
+Š05:07:58.161 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
+u05:07:58.171 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Someone is testing my application!
+Š05:07:58.432 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
+j05:07:58.492 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Starting email preparation...
+a05:07:58.495 [Test worker] INFO com.crud.tasks.service.SimpleEmailService - Email has been sent.

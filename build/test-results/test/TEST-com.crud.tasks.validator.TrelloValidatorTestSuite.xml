@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.validator.TrelloValidatorTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-24T23:19:57" hostname="MacBook-Pro-Mateusz.local" time="1.104">
+<testsuite name="com.crud.tasks.validator.TrelloValidatorTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-25T04:07:56" hostname="MacBook-Pro-Mateusz.local" time="1.371">
   <properties/>
-  <testcase name="testValidateTrelloBoards()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="1.084"/>
-  <testcase name="testValidateCard_practicalUsage()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="0.015"/>
-  <testcase name="testValidateCard_testUsage()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="0.003"/>
-  <system-out><![CDATA[00:19:58.619 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Starting filtering boards...
-00:19:58.631 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Boards have been filtered. Current list size: 1
-00:19:58.661 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
-00:19:58.675 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Someone is testing my application!
+  <testcase name="testValidateTrelloBoards()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="1.356"/>
+  <testcase name="testValidateCard_practicalUsage()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="0.011"/>
+  <testcase name="testValidateCard_testUsage()" classname="com.crud.tasks.validator.TrelloValidatorTestSuite" time="0.002"/>
+  <system-out><![CDATA[05:07:58.116 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Starting filtering boards...
+05:07:58.133 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Boards have been filtered. Current list size: 1
+05:07:58.161 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
+05:07:58.171 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Someone is testing my application!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

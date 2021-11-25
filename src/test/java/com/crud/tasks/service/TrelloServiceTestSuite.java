@@ -2,9 +2,7 @@ package com.crud.tasks.service;
 
 import com.crud.tasks.client.TrelloClient;
 import com.crud.tasks.config.AdminConfig;
-import com.crud.tasks.domain.CreatedTrelloCardDto;
-import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.domain.TrelloCardDto;
+import com.crud.tasks.domain.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -44,7 +42,10 @@ public class TrelloServiceTestSuite {
     void testCreateTrelloCard() {
         // Given
         TrelloCardDto trelloCardDto = new TrelloCardDto("name","desc","top","1");
-        CreatedTrelloCardDto createdTrelloCardDto = new CreatedTrelloCardDto("1","cardName","https://test.com");
+        TrelloBoardAndCard trelloBoardAndCard = new TrelloBoardAndCard(1,1);
+        TrelloAttachementByType trelloAttachementByType = new TrelloAttachementByType(trelloBoardAndCard);
+        TrelloBadges trelloBadges = new TrelloBadges(1,trelloAttachementByType);
+        CreatedTrelloCardDto createdTrelloCardDto = new CreatedTrelloCardDto("1","cardName","https://test.com", trelloBadges);
         when(adminConfig.getAdminMail()).thenCallRealMethod();
         when(trelloClient.createNewCard(trelloCardDto)).thenReturn(createdTrelloCardDto);
         doNothing().when(emailService).send(any());
@@ -52,6 +53,13 @@ public class TrelloServiceTestSuite {
         CreatedTrelloCardDto trelloCard = trelloService.createTrelloCard(trelloCardDto);
         // Then
         assertThat(trelloCard).isNotNull();
+        assertThat(trelloCard.getBadges()).isNotNull();
+        assertThat(trelloCard.getBadges().getVotes()).isEqualTo(1);
+        assertThat(trelloCard.getBadges().getAttachements()).isNotNull();
+        assertThat(trelloCard.getBadges().getAttachements().getTrello()).isNotNull();
+        assertThat(trelloCard.getBadges().getAttachements().getTrello()).isNotNull();
+        assertThat(trelloCard.getBadges().getAttachements().getTrello().getCard()).isEqualTo(1);
+        assertThat(trelloCard.getBadges().getAttachements().getTrello().getBoard()).isEqualTo(1);
         assertEquals("cardName", trelloCard.getName());
         verify(adminConfig, times(1)).getAdminMail();
         verify(trelloClient, times(1)).createNewCard(trelloCardDto);
