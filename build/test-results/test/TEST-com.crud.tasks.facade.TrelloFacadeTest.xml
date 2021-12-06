@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.facade.TrelloFacadeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-25T12:11:45" hostname="MBP-Mateusz" time="0.094">
+<testsuite name="com.crud.tasks.facade.TrelloFacadeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-06T20:58:05" hostname="MacBook-Pro-Mateusz.local" time="0.037">
   <properties/>
-  <testcase name="testCreateCard()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.055"/>
-  <testcase name="shouldFetchEmptyList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.006"/>
-  <testcase name="shouldFetchList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.03"/>
-  <system-out><![CDATA[13:11:45.559 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
+  <testcase name="testCreateCard()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.026"/>
+  <testcase name="shouldFetchEmptyList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.003"/>
+  <testcase name="shouldFetchList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.007"/>
+  <system-out><![CDATA[21:58:05.784 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

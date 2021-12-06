@@ -124,9 +124,9 @@ public class TaskControllerTest {
         Long id = 1L;
         doNothing().when(dbService).deleteTaskById(id);
         // When Then
-        mockMvc.perform(MockMvcRequestBuilders.delete("/v1/task/deleteTask")
+        mockMvc.perform(MockMvcRequestBuilders.delete("/v1/task/deleteTask/")
                 .contentType(MediaType.APPLICATION_JSON)
-                .param("id",String.valueOf(id)))
+                .param("taskId",String.valueOf(id)))
                 .andExpect(MockMvcResultMatchers.status().is(200));
     }
 }

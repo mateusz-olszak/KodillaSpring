@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.112s</div>
+<div class="counter">0.064s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">testCreateTask()</td>
-<td class="success">0.015s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDeleteTask()</td>
-<td class="success">0.019s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFetchTask()</td>
-<td class="success">0.020s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFetchTasks()</td>
-<td class="success">0.013s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFetchTasks_returnsEmptyList()</td>
 <td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testDeleteTask()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFetchTask()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFetchTasks()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFetchTasks_returnsEmptyList()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testUpdateTask()</td>
-<td class="success">0.033s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,11 +112,11 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2021-11-25 13:11:50.073  INFO 9675 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.crud.tasks.controller.TaskControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-11-25 13:11:50.074  INFO 9675 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.controller.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-11-25 13:11:50.084  INFO 9675 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.controller.TaskControllerTest
-2021-11-25 13:11:50.088  INFO 9675 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2021-11-25 13:11:50.090  INFO 9675 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d3bc2ba, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13bd7017, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@203d6464, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1de46b8b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e59549f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@769cb08b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3d49e478, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3cf7869, org.springframework.test.context.event.EventPublishingTestExecutionListener@47763923, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@54fdd1ae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2665956d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5e91bdf8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@28582828, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1292fc2c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@18d6ddee]
+<pre>2021-12-06 21:58:08.180  INFO 38590 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.crud.tasks.controller.TaskControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-06 21:58:08.181  INFO 38590 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.controller.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-06 21:58:08.186  INFO 38590 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.controller.TaskControllerTest
+2021-12-06 21:58:08.188  INFO 38590 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-12-06 21:58:08.189  INFO 38590 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@649e6cb0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@17787c9b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1034add, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ca51acc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bc91604, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1f012742, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4cfd3dd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7048caf2, org.springframework.test.context.event.EventPublishingTestExecutionListener@73328bc9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@651f89da, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1fb4ef9f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@299db9c1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4e1603f8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@57de02b9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6f2ec7ca]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -126,12 +126,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.4)
 
-2021-11-25 13:11:50.153  INFO 9675 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : Starting TaskControllerTest using Java 15.0.2 on MBP-Mateusz with PID 9675 (started by mati in /Users/mateuszolszak/IdeaProjects/KodillaSpring)
-2021-11-25 13:11:50.157  INFO 9675 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : No active profile set, falling back to default profiles: default
-2021-11-25 13:11:50.867  INFO 9675 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2021-11-25 13:11:50.867  INFO 9675 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-11-25 13:11:50.869  INFO 9675 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2021-11-25 13:11:50.892  INFO 9675 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : Started TaskControllerTest in 0.798 seconds (JVM running for 8.63)
+2021-12-06 21:58:08.221  INFO 38590 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : Starting TaskControllerTest using Java 15.0.2 on MacBook-Pro-Mateusz.local with PID 38590 (started by mati in /Users/mateuszolszak/IdeaProjects/KodillaSpring)
+2021-12-06 21:58:08.222  INFO 38590 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : No active profile set, falling back to default profiles: default
+2021-12-06 21:58:08.607  INFO 38590 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-12-06 21:58:08.608  INFO 38590 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-12-06 21:58:08.609  INFO 38590 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-12-06 21:58:08.622  INFO 38590 --- [    Test worker] c.c.tasks.controller.TaskControllerTest  : Started TaskControllerTest in 0.43 seconds (JVM running for 4.372)
 </pre>
 </span>
 </div>
@@ -143,7 +143,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 25 Nov 2021, 13:11:52</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 6 Dec 2021, 21:58:09</p>
 </div>
 </div>
 </body>
