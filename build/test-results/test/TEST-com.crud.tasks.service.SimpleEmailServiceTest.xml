@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.service.SimpleEmailServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-06T20:58:08" hostname="MacBook-Pro-Mateusz.local" time="0.033">
+<testsuite name="com.crud.tasks.service.SimpleEmailServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-07T07:31:41" hostname="MacBook-Pro-Mateusz.local" time="0.021">
   <properties/>
-  <testcase name="testSendMail_throwsMailException()" classname="com.crud.tasks.service.SimpleEmailServiceTest" time="0.033"/>
+  <testcase name="testSendMail_throwsMailException()" classname="com.crud.tasks.service.SimpleEmailServiceTest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

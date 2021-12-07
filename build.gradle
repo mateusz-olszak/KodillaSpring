@@ -20,13 +20,13 @@ dependencies {
         runtimeOnly 'org.postgresql:postgresql'
 //    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     compileOnly 'org.projectlombok:lombok:1.18.20'
-    compileOnly 'io.springfox:springfox-swagger-ui:2.9.2'
-    compileOnly 'io.springfox:springfox-swagger2:2.9.2'
+//    compileOnly 'io.springfox:springfox-swagger-ui:2.9.2'
+//    compileOnly 'io.springfox:springfox-swagger2:2.9.2'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 //    testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'com.google.code.gson:gson'
+//    testImplementation 'com.google.code.gson:gson'
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
 }
 
