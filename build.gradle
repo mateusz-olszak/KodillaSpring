@@ -17,7 +17,7 @@ dependencies {
     implementation group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    //    runtimeOnly 'org.postgresql:postgresql'
+        runtimeOnly 'org.postgresql:postgresql'
 //    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     compileOnly 'org.projectlombok:lombok:1.18.20'
     compileOnly 'io.springfox:springfox-swagger-ui:2.9.2'
