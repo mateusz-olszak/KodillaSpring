@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.facade.TrelloFacadeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-07T07:31:38" hostname="MacBook-Pro-Mateusz.local" time="0.036">
+<testsuite name="com.crud.tasks.facade.TrelloFacadeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-11T14:42:07" hostname="MacBook-Pro-Mateusz.local" time="0.032">
   <properties/>
-  <testcase name="testCreateCard()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.026"/>
-  <testcase name="shouldFetchEmptyList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.003"/>
+  <testcase name="testCreateCard()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.023"/>
+  <testcase name="shouldFetchEmptyList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.004"/>
   <testcase name="shouldFetchList()" classname="com.crud.tasks.facade.TrelloFacadeTest" time="0.005"/>
-  <system-out><![CDATA[08:31:38.625 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
+  <system-out><![CDATA[15:42:07.179 [Test worker] INFO com.crud.tasks.trello.validator.TrelloValidator - Seems that my application is being used in a proper way
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
